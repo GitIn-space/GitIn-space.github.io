@@ -5,10 +5,15 @@ header
 
 body
 {
-  background-color: #000;
+	background-color: #000;
 }
 
-p
+footer
+{
+	background-color: #000;
+}
+
+.text
 {
 	color: #0FF;
 }
