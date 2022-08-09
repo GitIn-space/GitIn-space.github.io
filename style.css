@@ -43,6 +43,16 @@ li
 	color: #0F0;
 }
 
+a
+{
+  color: #FF0;
+}
+
+a:visited
+{
+  color: #FFF;
+}
+
 .box
 {
 	width: 45%;
@@ -64,7 +74,7 @@ li
 .collapsible:after {
   content: '\02795';
   font-size: 13px;
-  color: #fff;
+  color: #FFF;
   float: right;
   margin-left: 5px;
 }
