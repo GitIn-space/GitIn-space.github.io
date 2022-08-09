@@ -20,6 +20,7 @@ div
 	position: relative;
 	padding: 5px;
 	width: 50%;
+	min-width: 200px;
 	margin: auto;
 }
 
