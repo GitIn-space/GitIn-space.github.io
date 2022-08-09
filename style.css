@@ -13,6 +13,12 @@ footer
 	background-color: #000;
 }
 
+div
+{
+	border: 3px;
+	border-color: red;
+}
+
 .text
 {
 	color: #0FF;
