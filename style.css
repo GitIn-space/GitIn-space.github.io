@@ -83,7 +83,7 @@ li
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  width: 200%;
+  width: 175%;
 }
 
 #separator
