@@ -18,7 +18,7 @@ div
 	border: 3px solid #F00;
 	position: relative;
 	padding: 5px;
-	width: 40%;
+	width: 50%;
 	margin: auto;
 }
 
@@ -30,4 +30,15 @@ p
 h1
 {
 	color: #0FF;
+}
+
+.box
+{
+	width: 45%;
+}
+
+#separator
+{
+	height: 10px;
+	width: 100%;
 }
