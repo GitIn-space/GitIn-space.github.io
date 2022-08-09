@@ -21,8 +21,7 @@ div
 	padding: 5px;
 	width: 50%;
 	margin: auto;
-	float: left;
-	overflow: hidden;
+	float: center;
 }
 
 p
@@ -43,6 +42,7 @@ h2
 .box
 {
 	width: 45%;
+	overflow: hidden;
 }
 
 #separator
