@@ -1,5 +1,6 @@
 header
 {
+	text-align: center;
 	background-color: #000;
 }
 
@@ -34,7 +35,7 @@ h1
 
 .box
 {
-	width: 45%;
+	width: 25%;
 }
 
 #separator
