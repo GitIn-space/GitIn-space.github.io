@@ -115,7 +115,13 @@ img
   width: 75%;
 }
 
-#separator
+.separator
 {
 	width: 100%;
+}
+
+#descbox
+{
+	margin-top: 5px;
+	padding-top: 5px;
 }
