@@ -43,7 +43,7 @@ h2
 
 ul
 {
-	width: 45%
+	width: 45%;
 }
 
 li
@@ -59,6 +59,11 @@ a
 a:visited
 {
   color: #FFF;
+}
+
+img
+{
+	width: 45%;
 }
 
 .box
