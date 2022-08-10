@@ -29,31 +29,37 @@ div
 p
 {
 	color: #0FF;
+	font-family: Arial, sans-serif;
 }
 
 h1
 {
 	color: #F00;
+	font-family: "Times New Roman", serif;
 }
 
 h2
 {
 	color: #C000C0;
+	font-family: "Times New Roman", serif;
 }
 
 ul
 {
-	width: 45%;
+	max-width: 45%;
+	height: auto;
 }
 
 li
 {
 	color: #0F0;
+	font-family: "Courier New", monospace;
 }
 
 a
 {
   color: #FF0;
+  font-family: "Courier New", monospace;
 }
 
 a:visited
@@ -63,7 +69,8 @@ a:visited
 
 img
 {
-	width: 45%;
+	max-width: 45%;
+	height: auto;
 }
 
 .box
