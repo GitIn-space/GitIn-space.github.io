@@ -2,6 +2,8 @@ header
 {
 	text-align: center;
 	background-color: #000;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 body
@@ -16,7 +18,7 @@ footer
 
 div
 {
-	border: 3px solid #F00;
+	/*border: 3px solid #F00;*/
 	position: relative;
 	padding: 5px;
 	width: 50%;
