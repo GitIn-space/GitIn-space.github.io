@@ -49,6 +49,17 @@
 						<li>Nebula 3: Somewhat average</li>
 					</ul>
 				<br>
+				<li>Scrum tools</li>
+					<ul>
+						<li>SVN: Somewhat comfortable</li>
+						<li>Github: Comfortable</li>
+						<li>Perforce: Somewhat comfortable</li>
+						<br>
+						<li>Trello: Comfortable</li>
+						<li>Jira: Comfortable</li>
+						<li>Miro: Comfortable</li>
+					</ul>
+				<br>
 				<li>Miscellaneous/outside of education</li>
 					<ul>
 						<li>Writing: Average-Competent</li>
@@ -89,18 +100,52 @@
 			</p>
 			<button type="button" class="collapsible">Read more</button>
 			<div class="content">
-				<p>The first problem that came to my table was to make the AI of the friendly agents. The general design was that they were to activate and make noise when the player was nearby, and when interacted with
-				they'd make their own way to the battering ram. This was quickly changed as we spoke about it, and to save some time on both design and programming for the MVP we decided to alter the behaviour. Now when they
-				detect the player by hearing they will active and follow the player until interacted with and thereby be teleported to the battering ram.
-				<br>The AI is made using a Behaviour Tree and BlackBoard connected to blueprints that interface with the game world, this is layered on top of a C++ base class. This kind of structure felt to me like it would
-				make it easier for programmer and designer alike to change and/or add behaviors where they made sense, or if we wanted to move something down to code and expose a blueprint node for example.
+				<p>The AI is made using a Behaviour Tree and BlackBoard connected to blueprints that interface with the game
+				world, this is layered on top of a C++ base class. This kind of structure felt to me like it would make it
+				easier for programmer and designer alike to change and/or add behaviors where they made sense, or if we
+				wanted to move something down to code and expose a blueprint node for example.
 				<br>
-				<br>As the agents are teleported to the battering ram they're supposed to attach to certain points and start pushing the ram forward. This turned out to be one of the major obstacles I had, since I couldn't
-				figure out a good way to attach them. I ended up using scene objects that I attached the actor to, but if the terraint was uneven they'd end up falling down or getting stuck which would dislocate them and cause
-				all sorts of havoc. After some trial and error we decided to make sure that the terrain just didn't have any of the potholes and sharp angles that caused issues, that would probably be faster than actually
-				fixing the problem since it looked good enough as it was already.
+				<br>The first problem that came to my table was to make the AI of the friendly agents. The general design
+				was that they were to activate and make noise when the player was nearby, and when interacted with they'd
+				make their own way to the battering ram. This was quickly changed as we spoke about it, and to save some
+				time on both design and programming for the MVP we decided to alter the behaviour. Now when they detect
+				the player by hearing they will active and follow the player until interacted with and thereby be
+				teleported to the battering ram.
 				<br>
+				<br>As the agents are teleported to the battering ram they're supposed to attach to certain points and
+				start pushing the ram forward. This turned out to be one of the major obstacles I had, since I couldn't
+				figure out a good way to attach them. I ended up using scene objects that I attached the actor to, but if
+				the terraint was uneven they'd end up falling down or getting stuck which would dislocate them and cause
+				all sorts of havoc. After some trial and error we decided to make sure that the terrain just didn't have
+				any of the potholes and sharp angles that caused issues, that would probably be faster than actually fixing
+				the problem since it looked good enough as it was already.
 				<br>
+				But, what if all the points were already occupied? Only that many agents have room to push the ram forward.
+				The simple solution I made was to have a SceneObject trailing behind the ram that the agents would try to
+				move towards. An improvement I'd potentially like to try in the future would be a more elegant way to
+				simulate them following the ram as a crowd instead of moving to a point all at once. But since time was in
+				short supply, like always, this was something that got pushed to the wishlist.
+				<br>
+				<br>The final part of the friendly AI puzzle was to tie them together to a system that would keep an eye
+				on them and decide if a loss condition was triggered. The environment is separated into three regions and
+				we decided that if the player ran out if friendly agents in their current region that would be the end.
+				Since the player can't push the ram themselves that felt like a natural way to lose, but that was when
+				the edge case cropped up: What if the ram is at a region door? You don't need agents to proceed at this
+				stage, so we'd need the region change to happen in stages where you first unlock the new batch of agents
+				and then actually transition forward (the gate was supposed to collapse behind you, but that got cut in
+				the end).
+				<br>This is managed in the GameMode, where all friendly agents will sign up once the game starts and
+				register where they belong. In case they'd later die, they report back and remove themselves from the list
+				and in case there's no more available friendly agents it would result in a game over. One caveat that cropped
+				up here was that as agents that pushed the ram across region borders would also need to be updated to belong
+				to the newly accessed region, as they'd otherwise not be accounted for correctly.
+				<br>
+				<br>I also had a small hand in making some of the Niagara effects, which were kept as simple as possible while
+				trying to make them stand out a bit.
+				<br>A simple respawn system is also tied to the region transition, so if the player gets knocked out they
+				wouldn't have to run back all the way from the start every time. This is part of why I had to make the region
+				changes in parts, otherwise they would get access to the new friendly agents and respawn on the wrong side of
+				the doors for instance.
 				</p>
 			</div>
 		</div>
