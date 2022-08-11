@@ -25,14 +25,6 @@
 			</p>
 		</div>
 		<div class="box">
-			<h2>Formal education</h2>
-			<ul>
-				<li>Computer Game Programming, Luleå University of Technology</li>
-				<br>
-				<li>Game Programmer, Futuregames</li>
-			</ul>
-		</div>
-		<div class="box">
 			<h2>Skills</h2>
 			<ul>
 				<li>Languages</li>
@@ -97,7 +89,19 @@
 			</p>
 			<button type="button" class="collapsible">Read more</button>
 			<div class="content">
-				<p>I mainly worked on the friendly AI and some systems surrounding their use.</p>
+				<p>The first problem that came to my table was to make the AI of the friendly agents. The general design was that they were to activate and make noise when the player was nearby, and when interacted with
+				they'd make their own way to the battering ram. This was quickly changed as we spoke about it, and to save some time on both design and programming for the MVP we decided to alter the behaviour. Now when they
+				detect the player by hearing they will active and follow the player until interacted with and thereby be teleported to the battering ram.
+				<br>The AI is made using a Behaviour Tree and BlackBoard connected to blueprints that interface with the game world, this is layered on top of a C++ base class. This kind of structure felt to me like it would
+				make it easier for programmer and designer alike to change and/or add behaviors where they made sense, or if we wanted to move something down to code and expose a blueprint node for example.
+				<br>
+				<br>As the agents are teleported to the battering ram they're supposed to attach to certain points and start pushing the ram forward. This turned out to be one of the major obstacles I had, since I couldn't
+				figure out a good way to attach them. I ended up using scene objects that I attached the actor to, but if the terraint was uneven they'd end up falling down or getting stuck which would dislocate them and cause
+				all sorts of havoc. After some trial and error we decided to make sure that the terrain just didn't have any of the potholes and sharp angles that caused issues, that would probably be faster than actually
+				fixing the problem since it looked good enough as it was already.
+				<br>
+				<br>
+				</p>
 			</div>
 		</div>
 		<div class="box">
@@ -110,9 +114,8 @@
 				<li>Role: Gameplay programmer, system implementation</li>
 				<li><a href="https://github.com/PhilipMillenros/UnderLine">Github</a></li>
 			</ul>
-			<img src="Underline.png" alt="Temp. image courtesy Pixabay">
-			<p>The second game project. Take a deep-dive into the ocean to perform
-			maintenance on the facilities, just like every other day of the week. A puzzle game about unusual chores.
+			<img src="Underline.png">
+			<p>The second game project. Take a deep-dive into the ocean to perform maintenance on the facilities, just like every other day of the week. A puzzle game about unusual chores.
 			</p>
 			<button type="button" class="collapsible">Read more</button>
 			<div class="content">
@@ -131,7 +134,7 @@
 				<li>Role: Gameplay programmer</li>
 				<li><a href="https://github.com/taccck/GameProject1">Github</a></li>
 			</ul>
-			<img src="ECAToT.png" alt="Temp. image courtesy Pixabay">
+			<img src="ECAToT.png">
 			<p>After roughly one month into the education, we started the first game project. Your goal is to
 			traverse the tower while collecting ingredients to face your final cook-off at the top!
 			</p>
@@ -151,7 +154,7 @@
 				<li>Team composition: programmers, artists</li>
 				<li>Role: AI design & programmer, limited network programmer and engine triage</li>
 			</ul>
-			<img src="Caestus.png" alt="Temp. image courtesy Pixabay">
+			<img src="Caestus.png">
 			<p>The big game project we did at LTU. It's a 1v1-4 game somewhat similar to Dungeonland for those familiar.
 			Your goal is either to eliminate the heroes by summoning AI minnions or as the heroes to fight your way
 			through the gauntlet to the final boss encounter.
