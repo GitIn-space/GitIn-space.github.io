@@ -146,6 +146,7 @@ img
 
 .filler
 {
+	display: block;
 	height: 8px;
 	background-color: #008000;
 }
