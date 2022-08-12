@@ -96,7 +96,6 @@ img
 
 .skills
 {
-	background-color: #400080;
 	color: #0F0;
 	width: 50%;
 	border-radius: 25px;
@@ -104,8 +103,7 @@ img
 
 .project
 {
-	background-color: #400080;
-	color: #0FF;
+	color: #0F0;
 	border-radius: 25px;
 }
 
