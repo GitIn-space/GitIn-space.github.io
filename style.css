@@ -140,11 +140,10 @@ img
 
 .bar
 {
-	width: 100px;
 	height: 10px;
 	background-color: #C0C080;
-	min-width: 100%;
-	max-width: 100%;
+	min-width: 100px;
+	max-width: 100px;
 }
 
 .filler
