@@ -140,7 +140,7 @@ img
 
 .bar
 {
-	width: 100%;
+	width: 100px;
 	height: 10px;
 	background-color: #C0C080;
 	min-width: 100%;
