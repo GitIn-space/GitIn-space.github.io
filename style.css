@@ -142,6 +142,7 @@ img
 	width: 100%
 	height: 10px;
 	background-color: #C0C080;
+	display: inline-block;
 }
 
 .filler
