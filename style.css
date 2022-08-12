@@ -149,6 +149,9 @@ img
 	height: 8px;
 	background-color: #008000;
 	min-width: 75%;
+	margin: 0px;
+	padding: 0px;
+	margin-left: auto;
 }
 
 #descbox
