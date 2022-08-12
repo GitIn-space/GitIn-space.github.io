@@ -147,7 +147,7 @@ img
 {
 	height: 8px;
 	background-color: #008000;
-	flex: 0 0 75%;
+	flex-basis: 75%;
 }
 
 #descbox
