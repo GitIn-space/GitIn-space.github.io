@@ -149,6 +149,7 @@ img
 {
 	height: 8px;
 	background-color: #008000;
+	display: inline-block;
 }
 
 #descbox
