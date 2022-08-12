@@ -146,6 +146,7 @@ img
 
 .filler25
 {
+	float: left;
 	width: 25%
 	height: 10px;
 	background-color: #008000;
@@ -153,6 +154,7 @@ img
 
 .filler50
 {
+	float: left;
 	width: 50%
 	height: 10px;
 	background-color: #008000;
@@ -160,6 +162,7 @@ img
 
 .filler75
 {
+	float: left;
 	width: 75%
 	height: 10px;
 	background-color: #008000;
@@ -167,6 +170,7 @@ img
 
 .filler100
 {
+	float: left;
 	width: 100%
 	height: 10px;
 	background-color: #008000;
