@@ -92,6 +92,14 @@ img
   font-size: 15px;
 }
 
+.skills
+{
+	background-color: #400080;
+	color: #0F0;
+	width: 20%;
+	border-radius: 25px;
+}
+
 .collapsible:after {
   content: '\02795';
   font-size: 13px;
