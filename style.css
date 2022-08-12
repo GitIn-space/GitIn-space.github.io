@@ -144,6 +144,8 @@ img
 	background-color: #C0C080;
 	min-width: 100px;
 	max-width: 100px;
+	padding: 3px;
+	margin: 3px;
 }
 
 .filler
