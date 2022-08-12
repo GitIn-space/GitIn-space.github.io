@@ -118,7 +118,7 @@ img
 }
 
 .active, .collapsible:hover {
-  background-color: #404040;
+  background-color: #202020;
 }
 
 .active:after {
