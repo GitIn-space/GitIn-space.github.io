@@ -181,32 +181,34 @@
 			<h2>Our Dying Rights (2022)</h2>
 			<ul>
 				<li>Engine: Unreal Engine 5</li>
+				<li>Role: AI programmer, gameplay programmer, limited system designer</li>
 				<li>Team size: 14</li>
 				<li>Duration: 7 weeks</li>
 				<li>Team composition: programmers, designers, artists, quality assurance</li>
-				<li>Role: AI programmer, gameplay programmer, limited system designer</li>
 				<li><a href="https://github.com/ravenblackhart/FG21FT_GP03_Team08">Github</a></li>
 			</ul>
 			<img src="ODR.png">
-			<p>You play as a long-forgotten hero that gather your allies to escape from captivity, sprinkled with some
-			fantasy and zombie flavours.
+			<h3>My responsibilities</h3>
+			<p>The first task I had to tackle was the friendly AI, and since we didn't have a dedicated gameplay designer
+			most of the details were left up to me but I still worked close with the project owner to realize the vision
+			of what they were supposed to do.
+			<br>This included setting up the general behaviour in BehaviourTree and the different ways to interact between
+			the player and the agents. Later this evolved to include the agents' connection to the battering ram and the
+			system controlling one of the loss-states: if all of the friendly agents died and/or were inaccessible.
+			<br>Aside from the AI I also worked on the Niagara effects pertaining to hitting something with the hammer and
+			teleporting the friendly agents.
 			</p>
-			<button type="button" class="collapsible project">Read more</button>
+			<button type="button" class="collapsible project">Process</button>
 			<div class="content">
-				<h3>My responsibilities</h3>
-				<p>Lorem ipsum dolor sit amet..
-				</p>
-				<br><h3>Process</h3>
-				<br><p>The AI is made using a Behaviour Tree and BlackBoard connected to blueprints that interface with the game
+				<p>The AI is made using a BehaviourTree and BlackBoard connected to blueprints that interface with the game
 				world, this is layered on top of a C++ base class. This kind of structure felt to me like it would make it
 				easier for programmer and designer alike to change and/or add behaviors where they made sense, or if we
 				wanted to move something down to code and expose a blueprint node for example.
 				<br>
-				<br>The first problem that came to my table was to make the AI of the friendly agents. The general design
-				was that they were to activate and make noise when the player was nearby, and when interacted with they'd
-				make their own way to the battering ram. This was quickly changed as we spoke about it, and to save some
-				time on both design and programming for the MVP we decided to alter the behaviour. Now when they detect
-				the player by hearing they will active and follow the player until interacted with and thereby be
+				<br>The general design was that they were to activate and make noise when the player was nearby, and when
+				interacted with they'd make their own way to the battering ram. This was quickly changed as we spoke about it,
+				and to save some time on both design and programming for the MVP we decided to alter the behaviour. Now when
+				they detect the player by hearing they will active and follow the player until interacted with and thereby
 				teleported to the battering ram.
 				<br>
 				<br>As the agents are teleported to the battering ram they're supposed to attach to certain points and
@@ -225,7 +227,7 @@
 				<br>
 				<br>The final part of the friendly AI puzzle was to tie them together to a system that would keep an eye
 				on them and decide if a loss condition was triggered. The environment is separated into three regions and
-				we decided that if the player ran out if friendly agents in their current region that would be the end.
+				we decided that if the player ran out if friendly agents in their current region it would be the end.
 				Since the player can't push the ram themselves that felt like a natural way to lose, but that was when
 				the edge case cropped up: What if the ram is at a region door? You don't need agents to proceed at this
 				stage, so we'd need the region change to happen in stages where you first unlock the new batch of agents
@@ -242,7 +244,7 @@
 				<br>A simple respawn system is also tied to the region transition, so if the player gets knocked out they
 				wouldn't have to run back all the way from the start every time. This is part of why I had to make the region
 				changes in parts, otherwise they would get access to the new friendly agents and respawn on the wrong side of
-				the doors for instance.
+				the doors for instance. This is just a simple list that the respawn points signs up to at the start of the game.
 				</p>
 			</div>
 		</div>
@@ -250,10 +252,10 @@
 			<h2>Underline (2022)</h2>
 			<ul>
 				<li>Unity</li>
+				<li>Role: Gameplay programmer, system implementation</li>
 				<li>Team size: 12</li>
 				<li>Duration: 4 weeks</li>
 				<li>Team composition: programmers, designers, artists, project managers, quality assurance</li>
-				<li>Role: Gameplay programmer, system implementation</li>
 				<li><a href="https://github.com/PhilipMillenros/UnderLine">Github</a></li>
 			</ul>
 			<img src="Underline.png">
@@ -271,10 +273,10 @@
 			<h2>Extreme Cooking adventure: Tower of Trial (2021)</h2>
 			<ul>
 				<li>Unity</li>
+				<li>Role: Gameplay programmer</li>
 				<li>Team size: 8</li>
 				<li>Duration: 2 weeks</li>
 				<li>Team composition: programmers, designers, artists, quality assurance</li>
-				<li>Role: Gameplay programmer</li>
 				<li><a href="https://github.com/taccck/GameProject1">Github</a></li>
 			</ul>
 			<img src="ECAToT.png">
@@ -292,10 +294,10 @@
 			<h2>Caestus (2014)</h2>
 			<ul>
 				<li>Engine: Nebula 3</li>
+				<li>Role: AI design & programmer, limited network programmer and engine triage</li>
 				<li>Team size: 10</li>
 				<li>Duration: aprox. 10 weeks</li>
 				<li>Team composition: programmers, artists</li>
-				<li>Role: AI design & programmer, limited network programmer and engine triage</li>
 			</ul>
 			<img src="Caestus.png">
 			<p>The big game project we did at LTU. It's a 1v1-4 game somewhat similar to Dungeonland for those familiar.
