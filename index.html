@@ -252,20 +252,46 @@
 			<h2>Underline (2022)</h2>
 			<ul>
 				<li>Unity</li>
-				<li>Role: Gameplay programmer, system implementation</li>
+				<li>Role: Gameplay programmer, system programmer</li>
 				<li>Team size: 12</li>
 				<li>Duration: 4 weeks</li>
 				<li>Team composition: programmers, designers, artists, project managers, quality assurance</li>
 				<li><a href="https://github.com/PhilipMillenros/UnderLine">Github</a></li>
 			</ul>
 			<img src="Underline.png">
-			<p>The second game project. Take a deep-dive into the ocean to perform maintenance on the facilities, just like
-			every other day of the week. A puzzle game about unusual chores.
+			<h3>My responsibilities</h3>
+			<p>My main area during this project was to set up the different ways to unlock the doors and how to close them again.
+			There's the kinds of switches for the player to interact with: levers, keys and "turbines". To activate the turbines
+			the player has to wind them up by laying their oxygen line around them and then rewind, basically winding them up for
+			a short while. All three of switches are connected to a timer that disconnects them after a delay, forcing the player
+			to execute the puzzle with a time constraint.
+			<br>Aside from that I also set up the basic controls, AudioManager and a communication system between the switches and
+			the doors, the latter being completely rewritten in the latter half of the project due to an unforseen glitch.
 			</p>
-			<button type="button" class="collapsible project">Read more</button>
+			<button type="button" class="collapsible project">Process</button>
 			<div class="content">
-				<p>The different kinds of switches and their interactions along with their connection to the doors was where I spent most of my time
-				in this project.
+				<p>The levers were very straight forward to implement, keys and sockets slightly more complicated. If the key is
+				dropped, it will start crawling back to its starting position after a certain delay, the same if it's been
+				slotted into a keyhole without solving the entire puzzle. Aside from returning to its position it's simply
+				a matter of parenting the key to either the player's "hand" or the keyhole.
+				<br>The turbines are a completely different beast as they can spin in a set direction (left or right around the
+				Y-axis) for a set amount of time. I solved this by checking if the player is currently rewinding, which direction
+				they're facing and since the rewind speed accellerates I also had to check that they're moving faster than a threshold.
+				This is then compared to a plane centered on the turbine where it maps the player's position to a certain quadrant of
+				the plane.
+				<br>Say that the player is in the first quadrant (top left) and the turbine rotates clockwise, this would give
+				that if the player faces in a downwards and/or leftward direction as they rewind fast enough they'll be going in the
+				right direction.
+				<br>
+				<br>The doors themselves were keeping track on if they were supposed to open or not, using a matrix of how many
+				locks they had and how many keys each lock had. They also used a simple coroutine timer, similar to the keys above,
+				to determine if the door was successfully opened.
+				<br>
+				<br>Both of the above parts used a simple messageing system that utilized ScriptableObjects, since that was something
+				we'd learned just a few weeks prior. The downside of this was that it for some reason didn't work when Unity baked the
+				game into an executable, so that was a major setback hours before the prototype deadline and our doors didn't work in
+				the deliverable. We had to rewrite the entire system the following week, but since I was in the middle of making the
+				turbines work at the time that task fell to another programmer in the group.
 				</p>
 			</div>
 		</div>
