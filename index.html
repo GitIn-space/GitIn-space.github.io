@@ -8,7 +8,7 @@
 <header>
 	<div>
 		<div>
-			<h1>Name Namesson</h1>
+			<h1>Martin Jonson</h1>
 		</div>
 		<div id="descbox">
 			<p>Game programmer<br>System enthusiast<br>Engineer at heart
@@ -173,9 +173,28 @@
 			<h1>Group Projects</h1>
 		</div>
 		<div class="box">
-			<h2>GP4</h2>
-			<p>TBA
+			<h2>Gravitum (2022)</h2>
+			<ul>
+				<li>Engine: Unreal Engine 5</li>
+				<li>Role: Gameplay programmer, limited system designer</li>
+				<li>Team size: 7</li>
+				<li>Duration: 2+4 weeks</li>
+				<li>Team composition: programmers, designers</li>
+				<li><a href="">Github (WIP)</a></li>
+			</ul>
+			<img src="Gravitum.png">
+			<h3>My responsibilities</h3>
+			<p>First we got two weeks to come up with two prototypes and we decided to split the group and work on both in
+			parallel, where I worked on one of the features in what would become Gravitum. My contribution was a mechanic
+			that would let you walk on walls and the ceiling by manipulating the player's own gravity.
+			<br>After that I made a small quest system to give hints to the player on what to do next and general requests
+			from the designers.
 			</p>
+			<button type="button" class="collapsible project">Process (WIP)</button>
+			<div class="content">
+				<p>
+				</p>
+			</div>
 		</div>
 		<div class="box">
 			<h2>Our Dying Rights (2022)</h2>
@@ -306,13 +325,25 @@
 				<li><a href="https://github.com/taccck/GameProject1">Github</a></li>
 			</ul>
 			<img src="ECAToT.png">
-			<p>After roughly one month into the education, we started the first game project. Your goal is to
-			traverse the tower while collecting ingredients to face your final cook-off at the top!
+			<p>The timeframe in this project really made us scramble to finish whatever needed doing at the time, so quite a few
+			things ended up in my hands. The major features I worked with were the two enemy types, the raising lava and the
+			quick-time events at the end. I also worked a fair while on jump-through platforms until someone from another group
+			pointed out that such platforms already existed in Unity.
 			</p>
-			<button type="button" class="collapsible project">Read more</button>
+			<button type="button" class="collapsible project">Process</button>
 			<div class="content">
-				<p>Here it was more of just picking up whatever needed to be done with such a short timeframe. The lava,
-				platforms, falling and patroling enemies and the quick time events at the end being the highlights.
+				<p>The two enemy types were one that falls from the top of the screen, basically an anvil or similar, and one that
+				patrols a certain distance from a point and back. Both are fairly similar to the extent that they're more or less
+				moving hitboxes powered by fixedUpdate. The spawner that creates the falling enemies is a coroutine timer that
+				spawns them within a span centered on the player.
+				<br>
+				<br>The raising lava works in a similar fashion, fixedUpdate that raises it a certain amount per tick. In addition
+				there's a couroutine that calculates the distance to the player and amplifies the raising if the distance is greater
+				than a threshold.
+				<br>
+				<br>The QTEs at the very end of the game consists of challenges around clicking certain inputs in a certain order.
+				To make it simple to add additional challenges I designed the system to use an abstract class containing the
+				information needed to visualize the challenge and a callback to verify the input given. 
 				</p>
 			</div>
 		</div>
