@@ -78,6 +78,7 @@ img
 {
 	max-width: 100%;
 	height: auto;
+	padding: 5px;
 }
 
 .box
@@ -173,5 +174,4 @@ img
 {
 	margin-top: 0px;
 	padding: 0px;
-	background-color: #202020;
 }
