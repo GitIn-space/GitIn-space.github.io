@@ -409,62 +409,59 @@
 			<h2>Arkanoid-like (2022)</h2>
 			<ul>
 				<li>C++, SDL</li>
-				<li><a href="" target="_blank">Github</a></li>
+				<li><a href="https://github.com/GitIn-space/Arkanoidassignment" target="_blank">Github</a></li>
 			</ul>
 			<h3>Short description</h3>
 			<p>Short project made alongside the Wordl-like, time kind of ran out on me but I still feel that it shows
 			something. As I started making the general structure for the game I felt that I more and more slid into
-			building a small engine to run the simulation.
+			building a small engine to run the simulation, and building blocks made as modular as possible.
 			</p>
-			<button type="button" class="collapsible">Read more</button>
-			<div class="content">
-				<p>
-				</p>
-			</div>
 		</div>
 		<div class="box">
 			<h2>Wordl-like (2022)</h2>
 			<ul>
 				<li>C++</li>
-				<li><a href="" target="_blank">Github</a></li>
+				<li><a href="https://github.com/GitIn-space/Wordlassignment" target="_blank">Github</a></li>
 			</ul>
 			<h3>Short description</h3>
-			<p>
+			<p>Short project to make something akin to the popular Wordl game. I started out trying to figure out
+			my own solution from scratch, which ended up being some kind of nested arrays indexed by letters and
+			that way seeing of a word would be legal. After that I went onto the Internet to see if there were
+			some algorithms better suited for the task. That's when I discovered <a href="https://en.wikipedia.org/wiki/Trie" target="_blank">Trie</a>,
+			so I went ahead and implemented it.
 			</p>
-			<button type="button" class="collapsible">Read more</button>
-			<div class="content">
-				<p>
-				</p>
-			</div>
 		</div>
 		<div class="box">
 			<h2>Snake-like (2021)</h2>
 			<ul>
 				<li>Unity</li>
-				<li><a href="" target="_blank">Github</a></li>
+				<li><a href="https://github.com/GitIn-space/Snakedlist" target="_blank">Github</a></li>
 			</ul>
 			<h3>Short description</h3>
-			<p>
+			<p>Another short project where we were to implement a single-linked list and make a snake game out of it.
+			I impemented a few extra interfaces to be able to iterate through the snake in for-each loops, just to make
+			it easier for myself later. My "quirk" with the game was to use an older implementation of A* pathfinding
+			and a simple AI that I set up to play for me. The spawning of food also takes the placement of the snake into
+			consideration, and the map itself has potential for unwalkable terrain.
 			</p>
-			<button type="button" class="collapsible">Read more</button>
-			<div class="content">
-				<p>
-				</p>
-			</div>
 		</div>
 		<div class="box">
-			<h2>Multiplayer things (2013)</h2>
+			<h2>Multiplayer projects (2013)</h2>
 			<ul>
 				<li>Java/C++</li>
 			</ul>
-			<h3>Short description</h3>
-			<p>
+			<h3>Description</h3>
+			<p>Just wanted to mention various small projects where I've messed around with multiplayer.
+			<br>The first project was written in Java and used one server that could then have multiple clients joining
+			it. These would see each other represented in the world (small balls on a field, yey). The server utilized
+			threads to keep the player connections alive and broadcast events to all of them via an observer pattern
+			architecture.
+			<br>
+			<br>The other project built upon the Java project, but this time in C and C++ and instead of making our own
+			protocol we were given one to use. We had to make a server program that was to run on a virual Linux computer
+			and a client program to run on a Windows computer. Forks and C-style threads wrapped in C++ was quite a lot
+			tougher to work with than in Java, but eventually they shaped out as well.
 			</p>
-			<button type="button" class="collapsible">Read more</button>
-			<div class="content">
-				<p>
-				</p>
-			</div>
 		</div>
 	</div>
 	
