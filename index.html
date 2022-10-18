@@ -39,16 +39,22 @@
 			and educational. Picking apart games and trying to figure out ways to improve them or seeing how they did
 			something different is something I can spend a few hours on by accident, usually talking it over while
 			playing it with friends.
-			<br>
-			<br>In my spare time, I try to sometimes step away from the computer and sit down with different kinds of
-			games. Anything from card games, board games to tabletop RPGs, depending on who's available. A good book
-			might make its way into the schedule from time to time as well.
-			<br>
-			<br>As for games I play, I'm very much an omnivore. The one genre I stay out of is horror but aside from that
-			I believe that anything can be fun, though I tend to gravitate towards cooperative multiplayer games. Some
-			highlights in no particular order: Factorio, EVE Online, WoW, Europa Universalis 4, Warframe, Vermintide 2,
-			Star Wars: Empire at War, Across the Obelisk, Slay the Spire, Frostpunk.
 			</p>
+			<br><button type="button" class="collapsible project">Free time</button>
+				<div class="content">
+					<p>In my spare time, I try to sometimes step away from the computer and sit down with different kinds of
+					games. Anything from card games, board games to tabletop RPGs, depending on who's available. A good book
+					might make its way into the schedule from time to time as well.
+					</p>
+				</div>
+			<br><button type="button" class="collapsible project">Games I play</button>
+				<div class="content">
+					<p>As for games I play, I'm very much an omnivore. The one genre I stay out of is horror but aside from that
+					I believe that anything can be fun, though I tend to gravitate towards cooperative multiplayer games. Some
+					highlights in no particular order: Factorio, EVE Online, WoW, Europa Universalis 4, Warframe, Vermintide 2,
+					Star Wars: Empire at War, Across the Obelisk, Slay the Spire, Frostpunk.
+					</p>
+				</div>
 		</div>
 		<div class="box">
 			<h2>Skills</h2>
@@ -113,7 +119,7 @@
 							</li>
 							<li>Unreal Engine 4/5
 								<div class="bar">
-									<div class="filler" style="min-width: 50%; max-width: 50%"></div>
+									<div class="filler" style="min-width: 75%; max-width: 75%"></div>
 								</div>
 							</li>
 							<li>Nebula 3
@@ -207,6 +213,7 @@
 				<li>Duration: 2+4 weeks</li>
 				<li>Team composition: programmers, designers</li>
 				<!--<li><a href="" target="_blank">Github (WIP)</a></li>-->
+				<li><a href="" target="_blank">Itch.io (WIP)</a></li>
 			</ul>
 			<img src="Gravitum.png">
 			<h3>My responsibilities</h3>
@@ -219,7 +226,19 @@
 			<button type="button" class="collapsible project">Process (WIP)</button>
 			<div class="content">
 				<p>We noticed that the regular character didn't behave correctly if rotated around a non-yaw axis, so very
-				early on we decided to go with a pawn and the floatingMovement component
+				early on we decided to go with a pawn and the floatingMovement component. This and some math worked pretty
+				good to detect the different cases of rotation that were needed to make the character always have their
+				feet down. The math mostly consisted of the hit normal of a raycast and the current gravity, to figure out
+				the degree difference in case it was a 90&deg; or 180&deg; change. For some reason that I didn't have time
+				to dig into, there was an edge case when the raycast was done in the same direction as the Z-axis, so that
+				was also something I had to take care of.
+				<br>At the end of the prototype stage it was fully functioning, if in a rough state. During the first
+				weekend of the project proper another programmer in the group dove into this and made the transitions feel
+				a lot better and in general took over the development of the feature.
+				<br>
+				<br>The second system I got into was a simple mission system that the designers requested. It was supposed
+				to lie between a UI element and something they could place in the world to show objectives and unlock hints.
+				<br>
 				</p>
 			</div>
 		</div>
@@ -232,6 +251,7 @@
 				<li>Duration: 7 weeks</li>
 				<li>Team composition: programmers, designers, artists, quality assurance</li>
 				<li><a href="https://github.com/ravenblackhart/FG21FT_GP03_Team08" target="_blank">Github</a></li>
+				<li><a href="https://futuregames.itch.io/our-dying-rights" target="_blank">Itch.io</a></li>
 			</ul>
 			<img src="ODR.png">
 			<h3>My responsibilities</h3>
@@ -303,6 +323,7 @@
 				<li>Duration: 4 weeks</li>
 				<li>Team composition: programmers, designers, artists, project managers, quality assurance</li>
 				<li><a href="https://github.com/PhilipMillenros/UnderLine" target="_blank">Github</a></li>
+				<li><a href="https://futuregames.itch.io/under-line-deep-sea-solutions" target="_blank">Itch.io</a></li>
 			</ul>
 			<img src="Underline.png">
 			<h3>My responsibilities</h3>
@@ -350,6 +371,7 @@
 				<li>Duration: 2 weeks</li>
 				<li>Team composition: programmers, designers, artists, quality assurance</li>
 				<li><a href="https://github.com/taccck/GameProject1" target="_blank">Github</a></li>
+				<li><a href="https://futuregames.itch.io/extreme-cooking-adventure-tower-of-trial" target="_blank">Itch.io</a></li>
 			</ul>
 			<img src="ECAToT.png">
 			<h3>My responsibilities</h3>

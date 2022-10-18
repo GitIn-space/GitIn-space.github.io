@@ -32,6 +32,8 @@ p
 {
 	color: #0F0;
 	font-family: Arial, sans-serif;
+	line-height: 150%;
+	font-size: 1.15em;
 }
 
 h1
@@ -50,6 +52,7 @@ h3
 {
 	color: #F0F;
 	font-family: "Times New Roman", serif;
+	font-size: 1.25em;
 }
 
 ul
