@@ -223,7 +223,7 @@
 			<br>After that I made a small mission system to give hints to the player on what to do next, a respawn system
 			and general requests from the designers.
 			</p>
-			<button type="button" class="collapsible project">Process (WIP)</button>
+			<button type="button" class="collapsible project">Process</button>
 			<div class="content">
 				<p>We noticed that the regular character didn't behave correctly if rotated around a non-yaw axis, so very
 				early on we decided to go with a pawn and the floatingMovement component. This and some math worked pretty
@@ -238,7 +238,19 @@
 				<br>
 				<br>The second system I got into was a simple mission system that the designers requested. It was supposed
 				to lie between a UI element and something they could place in the world to show objectives and unlock hints.
+				This turned into a system where a component could be placed onto anything, then that actor only having to
+				interact with that component to post new missions or update existing ones with obtained clues.
+				<br>The underlaying system is tied into the gameMode to easily give access between the components and the
+				mission handling. When triggered, the components calls in with their identifiers and the system then links
+				that to text to present into a widget on screen.
+				<br>Later on this mission system was refined a lot as I was asked to help in a separate project that,
+				it turned out, coincidentally needed just this kind of system.
 				<br>
+				<br>The respawn system was a simple respawn and fast travel setup, but it never made it into the final
+				project due to a change in design direction. It simply saved the player's transform as the player passed
+				checkpoints, and when needed would reload the player into that position. For the fast travel part, mostly
+				for easier debugging and design of the level, it would transport the player to the next respawn point in
+				order of appearance.
 				</p>
 			</div>
 		</div>
